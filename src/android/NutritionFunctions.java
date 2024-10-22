@@ -101,7 +101,7 @@ public class NutritionFunctions {
 
     public static AggregateGroupByPeriodRequest prepareAggregateGroupByPeriodRequest (TimeRangeFilter timeRange, Period period, HashSet<DataOrigin> dor) {
         Set<AggregateMetric<Mass>> metrics = new HashSet<>();
-        metrics.add(NutritionRecord.ENERGY_TOTAL);
+        //metrics.add(NutritionRecord.ENERGY_TOTAL);
         metrics.add(NutritionRecord.PROTEIN_TOTAL);
         metrics.add(NutritionRecord.TOTAL_FAT_TOTAL);
         metrics.add(NutritionRecord.TOTAL_CARBOHYDRATE_TOTAL);
@@ -111,7 +111,7 @@ public class NutritionFunctions {
 
     public static AggregateGroupByDurationRequest prepareAggregateGroupByDurationRequest (TimeRangeFilter timeRange, Duration duration, HashSet<DataOrigin> dor) {
         Set<AggregateMetric<Mass>> metrics = new HashSet<>();
-        metrics.add(NutritionRecord.ENERGY_TOTAL);
+        //metrics.add(NutritionRecord.ENERGY_TOTAL);
         metrics.add(NutritionRecord.PROTEIN_TOTAL);
         metrics.add(NutritionRecord.TOTAL_FAT_TOTAL);
         metrics.add(NutritionRecord.TOTAL_CARBOHYDRATE_TOTAL);
@@ -120,7 +120,7 @@ public class NutritionFunctions {
 
     public static AggregateRequest prepareAggregateRequest(TimeRangeFilter timeRange, HashSet<DataOrigin> dor) {
         Set<AggregateMetric<Mass>> metrics = new HashSet<>();
-        metrics.add(NutritionRecord.ENERGY_TOTAL);
+        //metrics.add(NutritionRecord.ENERGY_TOTAL);
         metrics.add(NutritionRecord.PROTEIN_TOTAL);
         metrics.add(NutritionRecord.TOTAL_FAT_TOTAL);
         metrics.add(NutritionRecord.TOTAL_CARBOHYDRATE_TOTAL);
