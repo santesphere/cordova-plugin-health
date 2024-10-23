@@ -656,6 +656,8 @@ public class HealthPlugin extends CordovaPlugin {
                         request = StepsFunctions.prepareAggregateGroupByPeriodRequest(timeRange, period, dor);
                     } else if (datatype.equalsIgnoreCase("nutrition")) {
                         //request = NutritionFunctions.prepareAggregateGroupByPeriodRequest(timeRange, period, dor);
+                        callbackContext.error("Datatype not recognized " + datatype);
+                        return;
                     }  else if (datatype.equalsIgnoreCase("weight")) {
                         request = WeightFunctions.prepareAggregateGroupByPeriodRequest(timeRange, period, dor);
                     } else if (datatype.equalsIgnoreCase("height")) {
@@ -716,6 +718,8 @@ public class HealthPlugin extends CordovaPlugin {
                         request = StepsFunctions.prepareAggregateGroupByDurationRequest(timeRange, duration, dor);
                     } else if (datatype.equalsIgnoreCase("nutrition")) {
                         //request = NutritionFunctions.prepareAggregateGroupByDurationRequest(timeRange, duration, dor);
+                        callbackContext.error("Datatype not recognized " + datatype);
+                        return;
                     } else if (datatype.equalsIgnoreCase("weight")) {
                         request = WeightFunctions.prepareAggregateGroupByDurationRequest(timeRange, duration, dor);
                     } else if (datatype.equalsIgnoreCase("height")) {
@@ -779,6 +783,8 @@ public class HealthPlugin extends CordovaPlugin {
                     request = StepsFunctions.prepareAggregateRequest(timeRange, dor);
                 } else if (datatype.equalsIgnoreCase("nutrition")) {
                     //request = NutritionFunctions.prepareAggregateRequest(timeRange, dor);
+                    callbackContext.error("Datatype not recognized " + datatype);
+                    return;
                 }  else if (datatype.equalsIgnoreCase("weight")) {
                     request = WeightFunctions.prepareAggregateRequest(timeRange, dor);
                 } else if (datatype.equalsIgnoreCase("height")) {
